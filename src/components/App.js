@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from '../logo.svg'
 import './App.css'
 import  Navbar from './Navbar'
-import  RegattasList from '../containers/RegattasList'
+import  BodyContainer from '../containers/BodyContainer'
 
 // Using class here
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         <h4 className="App-intro">
           List of regattas.
         </h4>
-        <RegattasList />
+        <BodyContainer />
       </div>
     )
   }

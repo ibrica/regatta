@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import logo from '../logo.svg'
 import './App.css'
-import  Navbar from './Navbar'
+import  Navbar from '../containers/Navbar'
 import  BodyContainer from '../containers/BodyContainer'
 
 // Using class here
 class App extends Component {
   render() {
+
     return ( 
       <div className="App">
-        <Navbar />
+        <Navbar  />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Regattas list</h1>

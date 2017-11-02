@@ -1,15 +1,19 @@
 import * as CONSTANTS from '../constants'
 
 // IDs of Regattas
-let RegattaId = 0
+let RegattaId = 1
 
 export const goHome = () => {
   return {
-    type: CONSTANTS.GO_HOME,
-    display: CONSTANTS.GO_HOME,
+    type: CONSTANTS.SHOW_HOME
   }
 }
 
+export const goDetail = () => {
+  return {
+    type: CONSTANTS.SHOW_DETAIL
+  }
+}
 
 export const addRegatta = (name, town, country) => {
   return {
@@ -19,7 +23,6 @@ export const addRegatta = (name, town, country) => {
     town,
     country
   }
-
 }
 
 export const toggleCountry = (country, active) => {

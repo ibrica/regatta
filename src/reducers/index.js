@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
-import regattas from './regattas'
-import filters from './filter'
+import regatta from './regatta'
+import filter from './filter'
+import show from './show'
 
 const regattaApp = combineReducers({
-  regattas,
-  filters
+  regatta,
+  filter,
+  show
 })
 
 export default regattaApp

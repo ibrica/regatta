@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 
-const getRegattas = (regattas, filter) => {
-      return regattas.filter(r => filter.includes(r.country))
+const getRegattas = (regatta, filter) => {
+      return regatta.filter(r => filter.includes(r.country))
 }
 
-let RegattasList = ({ regattas }) => (
+let RegattasList = ({ regatta }) => (
   <ul>
-    {regattas.map(r => (
+    {regatta.map(r => (
       <li key={r.id}> <strong>{r.name}</strong> {r.town} {r.country} </li>
     ))}
   </ul>
@@ -28,7 +28,7 @@ RegattasList.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    regattas: getRegattas(state.regattas, state.filter)
+    regatta: getRegattas(state.regatta, state.filter)
   }
 }
 

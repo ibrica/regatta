@@ -9,7 +9,7 @@ let input
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isChecked: state.regattas.includes(ownProps.label) //is regatta checkbox set
+    isChecked: state.regatta.includes(ownProps.label) //is regatta checkbox set
   }
 }
 

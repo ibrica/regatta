@@ -1,21 +1,16 @@
-import RegattasList from './RegattasList'
-import * as CONSTANTS from '../constants'
+import { connect } from 'react-redux'
+import Body from '../components/Body'
 
-//Implement conditional rendering
-let BodyContainer = ({ show }) => (
-    <div className="bodyContainer">
-    </div>
-)
 
 const mapStateToProps = state => {
     return {
-        show:  state.show
+        show: state.show
     }
 }
 
-BodyContainer = connect(
+const BodyContainer = connect(
     mapStateToProps
-)(BodyContainer)
+)(Body)
 
 export default BodyContainer
 

@@ -1,6 +1,6 @@
 import * as CONSTANTS from '../constants'
 
-const regattas = (state = [], action) => {
+const regatta = (state = [], action) => {
     switch (action.type) {
       case CONSTANTS.ADD_REGATTA:
         return [
@@ -12,10 +12,9 @@ const regattas = (state = [], action) => {
             country: action.country
           }
         ]
-
       default:
         return state
     }
   }
   
-  export default regattas
+  export default regatta

@@ -1,11 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { addRegatta, goHome } from '../actions/index'
 
-const RegattaDetail = ({ dispatch }) => {
+let RegattaDetail = ({ dispatch }) => {
 
   let name, town, country
 
-  //Not using rect-redux for dispatch
   const saveRegatta = (e) => {
     e.preventDefault()
     if (!name.value.trim()) {
@@ -16,7 +16,7 @@ const RegattaDetail = ({ dispatch }) => {
   }
 
   const navigateToHome = () => {
-    dispatch(goToHome())
+    dispatch(goHome())
   }
 
   return (
@@ -41,5 +41,6 @@ const RegattaDetail = ({ dispatch }) => {
     </div>
   )
 }
+RegattaDetail = connect()(RegattaDetail)
 
 export default RegattaDetail

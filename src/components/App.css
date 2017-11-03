@@ -76,3 +76,8 @@ button.btn.btn-block:hover, ul.nav li button:hover {
   width: 50%;
   margin: 0 auto;
 }
+
+li {
+  margin-left: 5%;
+  margin-right: 5%;
+}

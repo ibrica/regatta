@@ -13,6 +13,7 @@ let RegattaDetail = ({ dispatch }) => {
       return
     }
     dispatch(addRegatta(name.value,town.value,country.value ))
+    dispatch(goHome())
   }
 
   const navigateToHome = () => {
@@ -34,8 +35,8 @@ let RegattaDetail = ({ dispatch }) => {
         <select className='form-control' ref={node => {
           country = node
         }}> <option>Croatia</option><option>Italy</option><option>France</option>
-        </select>
-        <button type="submit" className='btn btn-lg default-back'>Save</button>
+        </select><br />
+        <button type="submit" className='btn btn-lg default-back'>Save</button> &nbsp;&nbsp;
         <button type="cancel" onClick={navigateToHome} className='btn btn-lg default-back'>Cancel</button>
       </form>
     </div>

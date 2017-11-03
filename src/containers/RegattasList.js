@@ -10,7 +10,7 @@ const getRegattas = (regatta, filter) => {
 let RegattasList = ({ regatta }) => (
   <ul>
     {regatta.map(r => (
-      <li key={r.id}> <strong>{r.name}</strong> {r.town} {r.country} </li>
+      <li className="list-group-item" key={r.id}> <strong>{r.name}</strong> {r.town} {r.country} </li>
     ))}
   </ul>
 )

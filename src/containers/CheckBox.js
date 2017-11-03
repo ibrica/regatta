@@ -4,35 +4,34 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 
-let input
-
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isChecked: state.regatta.includes(ownProps.label) //is regatta checkbox set
+    isChecked: state.filter.includes(ownProps.label) //is country checkbox set
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    toggleCheckboxChange: () => {
-      dispatch(toggleCountry(ownProps.label, input.checked))
+    toggleCheckboxChange: (isChecked) => {
+      dispatch(toggleCountry(ownProps.label, !isChecked))
     }
   }
 }
 
 
 let CheckBox = ({ label, isChecked, toggleCheckboxChange }) => {
+  const onChanged = () => { //Easiest way to send state to dispatch
+    toggleCheckboxChange(isChecked)
+  }
+
   return (
-    <label className="checkbox">
+    <label className="checkbox-inline">
         <input
               type="checkbox"
               value={label}
               checked={isChecked}
-              onChange={toggleCheckboxChange}
-              ref={node => {
-                  input = node
-              }}
+              onChange={onChanged}
           />
         {label}
     </label>

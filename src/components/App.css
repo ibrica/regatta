@@ -71,3 +71,8 @@ button.btn.btn-block:hover, ul.nav li button:hover {
 .form-control {
   border-radius: 0;
 }
+
+.detail{
+  width: 50%;
+  margin: 0 auto;
+}

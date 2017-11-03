@@ -45,8 +45,8 @@ let Navbar = ({dispatch}) => {
             <p>
                 <CheckBox label="All" />
                 <CheckBox label="Croatia" />
-                <CheckBox label="Italy" />
-                <CheckBox label="France" />
+                <CheckBox label="Italy"  />
+                <CheckBox label="France"  />
             </p>
             </nav>
         </div>

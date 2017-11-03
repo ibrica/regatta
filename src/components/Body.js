@@ -3,11 +3,11 @@ import RegattasList from '../containers/RegattasList'
 import RegattaDetail from '../containers/RegattaDetail'
 import * as CONSTANTS from '../constants'
 
-const Body = (show) => {
+const Body = ({show}) => {
     let content = (show===CONSTANTS.SHOW_DETAIL) ? 
         <RegattaDetail /> 
         :
-        <RegattasList /> 
+         <RegattasList /> 
 
     return (
         <div className="bodyContainer">

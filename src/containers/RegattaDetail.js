@@ -20,13 +20,13 @@ let RegattaDetail = ({ dispatch }) => {
   }
 
   return (
-    <div>
+    <div className="detail">
       <form onSubmit={saveRegatta}>
         <label className='form-label'>Name:</label>
         <input className='form-control' ref={node => {
           name = node
         }} /><br />
-        <label className='form-label'>Country:</label>
+        <label className='form-label'>Town:</label>
         <input className='form-control' ref={node => {
           town = node
         }} /><br />

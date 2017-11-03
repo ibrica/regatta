@@ -14,7 +14,7 @@ Start the development server
 > npm start
 ```
 
-Run testsq
+Run tests
 ```
 > npm test
 ```
